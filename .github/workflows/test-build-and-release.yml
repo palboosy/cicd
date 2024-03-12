@@ -25,9 +25,11 @@ jobs:
       - name: Install splint
         run: |
           sudo apt install splint
+      - name: Check out repository code
+        uses: actions/checkout@v4
       - name: Run static check
         run: |
-          ls -la; splint --compdef --exportlocal simplecalculator.c operations.c
+          splint --compdef --exportlocal simplecalculator.c operations.c
   building-and-delivery:
     name: Build and delivery
     permissions:

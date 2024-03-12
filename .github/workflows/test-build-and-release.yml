@@ -27,7 +27,7 @@ jobs:
           sudo apt install splint
       - name: Run static check
         run: |
-          splint --compdef --exportlocal simplecalculator.c operations.c
+          ls -la; splint --compdef --exportlocal simplecalculator.c operations.c
   building-and-delivery:
     name: Build and delivery
     permissions:
